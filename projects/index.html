@@ -4,31 +4,61 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects — Gregory Gulyaev</title>
-  <meta name="description" content="Projects by Gregory Gulyaev: AgentLight and other engineering experiments.">
+  <meta name="description" content="Projects by Gregory Gulyaev: AgentLight, a status board for Claude Code agents, and other engineering experiments.">
   <link rel="canonical" href="https://grisha-gu.dev/projects/">
+  <meta property="og:url" content="https://grisha-gu.dev/projects/">
+  <meta property="og:title" content="Projects — Gregory Gulyaev">
+  <meta property="og:description" content="AgentLight and other engineering experiments.">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👋%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <main>
+  <header class="topbar">
+    <a class="domain" href="/">grisha-gu.dev</a>
     <nav><a href="/">About</a><a href="/projects/" aria-current="page">Projects</a></nav>
+  </header>
 
-    <header>
-      <h1>Projects</h1>
-    </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="avatar" aria-hidden="true">GG</div>
+      <p class="name"><a href="/">Gregory Gulyaev</a></p>
+      <p class="bio">Tech Lead · 13+ yrs shipping games at scale · building tools for AI agents</p>
+      <ul class="contacts">
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Limassol, Cyprus</span></li>
+        <li><a href="https://www.linkedin.com/in/gregory-gulyaev/"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>LinkedIn</a></li>
+        <li><a href="https://github.com/grisha-gu"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.57v-2.04c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3Z"/></svg>GitHub</a></li>
+        <li><a href="https://x.com/grisha_gu"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.15h7.59l5.25 6.93 6.06-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg>X</a></li>
+        <li><a href="https://grisha-gu.itch.io/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="6"/><path d="M6 12h4M8 10v4"/><path d="M15 11h.01M18 13h.01"/></svg>itch.io</a></li>
+        <li><a href="mailto:gregory.gulyaev@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email</a></li>
+      </ul>
+    </aside>
 
-    <article class="card" id="agentlight">
-      <h2>AgentLight</h2>
-      <p>A physical status board for up to four Claude Code agents, plus a macOS menu bar app. Each agent gets a light that shows whether it's working or waiting for you; press its button and you jump straight to that terminal.</p>
-      <p class="meta">Open source · Swift, RP2040, USB HID, Claude Code hooks</p>
-      <p class="muted">Public release coming soon.</p>
-    </article>
+    <main class="content">
+      <h1 class="page-title">Projects</h1>
+      <p class="page-intro">Things I've built in the open. The details live in the READMEs on <a href="https://github.com/grisha-gu">GitHub</a>.</p>
 
-    <article class="card" id="element-slayer">
-      <h2>Element Slayer</h2>
-      <p>A browser FPS tower defence game made during a MY.GAMES internal game jam.</p>
-      <p class="meta">Unity · WebGL</p>
-      <p><a href="https://grisha-gu.itch.io/">Play on itch.io →</a></p>
-    </article>
-  </main>
+      <article class="card" id="agentlight">
+        <div class="card-icon" aria-hidden="true">🚦</div>
+        <div>
+          <div class="card-head"><h2>AgentLight</h2><span class="pill">Coming soon</span></div>
+          <p>A physical status board for up to four Claude Code agents, plus a macOS menu bar app. Each agent gets a light that shows whether it's working or waiting for you. Press its button and you jump straight to that terminal.</p>
+          <ul class="tags"><li>Open source</li><li>Swift</li><li>RP2040</li><li>USB HID</li><li>Claude Code hooks</li></ul>
+        </div>
+      </article>
+
+      <article class="card" id="element-slayer">
+        <div class="card-icon" aria-hidden="true">🔥</div>
+        <div>
+          <div class="card-head"><h2>Element Slayer</h2></div>
+          <p>A browser FPS tower defence game made during a MY.GAMES internal game jam.</p>
+          <ul class="tags"><li>Unity</li><li>WebGL</li></ul>
+          <p><a class="more" href="https://grisha-gu.itch.io/">Play on itch.io →</a></p>
+        </div>
+      </article>
+    </main>
+  </div>
 </body>
 </html>
