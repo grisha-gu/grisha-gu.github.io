@@ -81,18 +81,13 @@ a:hover { color: var(--accent); }
 .sidebar { position: sticky; top: 32px; }
 
 .avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 44px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: #fff;
-  background: linear-gradient(135deg, #f0915f, #d9542b 55%, #a8365a);
-  box-shadow: 0 0 0 5px var(--card), 0 0 0 6px var(--border);
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
   user-select: none;
 }
 
@@ -101,29 +96,18 @@ a:hover { color: var(--accent); }
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin: 24px 0 6px;
+  margin: 20px 0 6px;
 }
 
 .name a { text-decoration: none; }
 
-.bio { color: var(--muted); font-size: 15px; line-height: 1.5; margin: 0 0 20px; }
+.location { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 15px; margin: 0 0 16px; }
+.location svg { width: 16px; height: 16px; flex: none; }
 
-.contacts { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
-.contacts li { font-size: 15px; }
-.contacts a, .contacts span {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 5px 8px;
-  margin-left: -8px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--fg);
-}
-.contacts span { color: var(--muted); }
-.contacts a:hover { background: var(--accent-soft); color: var(--accent); }
-.contacts svg { width: 18px; height: 18px; flex: none; color: var(--muted); }
-.contacts a:hover svg { color: var(--accent); }
+.socials { list-style: none; padding: 0; margin: 0 0 0 -8px; display: flex; flex-wrap: wrap; gap: 4px; }
+.socials a { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; color: var(--muted); }
+.socials a:hover { background: var(--accent-soft); color: var(--accent); }
+.socials svg { width: 20px; height: 20px; }
 
 /* Content */
 
@@ -240,12 +224,10 @@ h2 {
 
 @media (max-width: 760px) {
   .layout { grid-template-columns: 1fr; gap: 40px; padding-top: 32px; }
-  .sidebar { position: static; display: grid; grid-template-columns: 88px minmax(0, 1fr); column-gap: 20px; align-items: center; }
-  .avatar { width: 88px; height: 88px; font-size: 32px; }
-  .name { margin: 0 0 4px; font-size: 24px; }
-  .bio { margin: 0; }
-  .contacts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-  .contacts a, .contacts span { margin: 0; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--card); }
+  .sidebar { position: static; display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 20px; align-items: center; }
+  .avatar { grid-row: span 3; border-radius: 14px; }
+  .name { margin: 0 0 2px; font-size: 24px; }
+  .location { margin: 0 0 6px; }
   .hello { font-size: 36px; }
   .lead { font-size: 18px; }
   .card { grid-template-columns: 1fr; gap: 14px; padding: 20px; }
