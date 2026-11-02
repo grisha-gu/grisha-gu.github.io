@@ -47,11 +47,9 @@ a:hover { color: var(--accent); }
   padding: 24px 16px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
 }
-.domain { font: 14px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--muted); text-decoration: none; }
-.domain:hover { color: var(--accent); }
 .topbar nav { display: flex; gap: 4px; }
 .topbar nav a {
   font-size: 15px;
